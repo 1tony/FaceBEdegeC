@@ -68,9 +68,9 @@ server运行在服务器端，负责等待边缘设备的连接，并根据设�
 ### Face_Win
 基于Qt5搭建的一个窗口，获取由边缘端发来的图像并进行人脸识别
 ### client_edge
-client_edge运行在边缘设备，向云端发起连接，并接收并运行云端传送的程序
+client_edge运行在边缘设备，与云端建立连接后，接收并运行云端传输的处理程序
 ### carema
-与云端建立通信链路，并将摄像头数据传输至云端
+由云端传送至边缘设备，与云端建立单独通信链路，读取摄像头数据传输至云端
 
 ## 联系方式
 If you'd like to contact us, please create a GitHub issue or email ljffuture@163.com. Thank you!
