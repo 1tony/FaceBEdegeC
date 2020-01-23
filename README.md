@@ -4,17 +4,21 @@ A face recognition system based on edge computing
 
 
 ## 环境要求
-  ·  Linux系统环境   
+### 服务器端
+  ·  Ubuntu16.04   
   ·  qt5   
   ·  opencv3.4.0   
   ·  shell
-  `sudo  apt install openssh-client;
-   sudo apt install openssh-server;
-   sudo aptt install expect`
- 
+### 边缘设备端
+  · Linux环境
+  · opencv3.4.0  
 ## 安装步骤
    整个系统是基于局域网的环境下搭建，所以需要根据使用场景下的网络环境在代码中进行修改，即可运行
-   ### 服务器端
+   ### 服务器端 
+   安装需要的shell环境
+   `sudo  apt install openssh-client;
+   sudo apt install openssh-server;
+   sudo aptt install expect`
    设置服务器监听的端口和ip地址，用于监听等待边缘设备的连接
 ```cpp
 Listen::Listen()
@@ -53,7 +57,7 @@ bool Network_client()
 ### server
 server运行在服务器端，负责等待边缘设备的连接，并根据设备信息向边缘设备传输相应的处理程序。
 ### Face_Win
-基于Qt5搭建的一个窗口，获取由边缘端发来的图像并进行人脸的检测
+基于Qt5搭建的一个窗口，获取由边缘端发来的图像并进行人脸识别
 ### client_edge
 client_edge运行在边缘设备，向云端发起连接，并接收并运行云端传送的程序
 ### carema
