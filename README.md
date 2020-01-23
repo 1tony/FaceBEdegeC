@@ -4,10 +4,10 @@ A face recognition system based on edge computing
 该项目
 
 # 环境要求
-  1、Linux系统环境
-  2、qt5
-  3、opencv3.4.0
-  4、shell
+  1.Linux系统环境;
+  2.qt5;
+  3.opencv3.4.0;
+  4.shell
  
 # 运行步骤
   整个小系统是基于局域网的环境下搭建，所以需要根据使用场景下的网络环境在代码中进行相关修改
