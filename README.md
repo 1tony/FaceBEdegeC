@@ -36,6 +36,14 @@ bool Network_client(struct Soc_info *temp)
     sld.client.sin_addr.s_addr = htonl(INADDR_ANY);
 }
 ```
+设置服务器端程序需要将编译好的程序（利用写好的脚本）
+```cpp
+//该函数在Soc类中
+void *Proce(void *arg)
+{
+	system("expect /home/wlm/code/test.sh");
+}
+```
 ### 客户端
 设置边缘设备需要连接的服务器的ip地址、端口
 ```cpp
@@ -56,6 +64,7 @@ bool Network_client()
 ## 模块
 ### server
 server运行在服务器端，负责等待边缘设备的连接，并根据设备信息向边缘设备传输相应的处理程序。
+
 ### Face_Win
 基于Qt5搭建的一个窗口，获取由边缘端发来的图像并进行人脸识别
 ### client_edge
